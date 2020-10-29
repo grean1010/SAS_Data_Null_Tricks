@@ -15,11 +15,12 @@ For years I have played around with the SAS data step funcitonality using data _
 ### (See test.sas)
 Finding your place in a log or even lst file can be difficult. This is especially true of macro driven programs and programs that rely heavily on include files. Dropping notes in the output file is a good way to keep track of where in teh program you are (and delude yourself into thinking SAS loves you back).
 
-![I live for this](/tree/main/images/HiMaria.png)
+![I live for this](images/HiMaria.png)
+
 
 A little more useful is simply dropping start and stop notes in your lst file that tell you when a critical section started and stopped.  Take this following example:
 
-![More useful](/tree/main/images/dropping_notes.png)
+![More useful](images/dropping_notes.png)
 
 Note that because of the “count ne 0”, the second data _null_ will only print if there are errors found in the data. However, the lst file will look the same whether there are no errors or the program failed to reach the point of printing.
 The start-printing line lets you know the program made it to the point of running the checks and preparing to print.
