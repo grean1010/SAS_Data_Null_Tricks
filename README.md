@@ -15,11 +15,11 @@ For years I have played around with the SAS data step funcitonality using data _
 ### (See test.sas)
 Finding your place in a log or even lst file can be difficult. This is especially true of macro driven programs and programs that rely heavily on include files. Dropping notes in the output file is a good way to keep track of where in teh program you are (and delude yourself into thinking SAS loves you back).
 
-![I live for this](HiMaria.png)
+![I live for this](images/HiMaria.png)
 
 A little more useful is simply dropping start and stop notes in your lst file that tell you when a critical section started and stopped.  Take this following example:
 
-![More useful](dropping_notes.png)
+![More useful](images/dropping_notes.png)
 
 Note that because of the “count ne 0”, the second data _null_ will only print if there are errors found in the data. However, the lst file will look the same whether there are no errors or the program failed to reach the point of printing.
 The start-printing line lets you know the program made it to the point of running the checks and preparing to print.
@@ -29,7 +29,7 @@ The end-printing line lets you know that it made it past the printing.
 <p>
 What does it look like?
 
-![More useful](dropping_notes_results.png)
+![More useful](images/dropping_notes_results.png)
 
 # Printing key observation counts
 Consider the following example.
@@ -38,7 +38,7 @@ Consider the following example.
 
 What do the results look like?
 
-![Displaying key counts](counting_results.png)
+![Displaying key counts](images/counting_results.png)
 
 You can create nice-looking text printouts that can easily be copied into emails or documents.  In this example, I used a data step just to create the counts.  In practice, I would create these counts in a data step that was functional in the program.  This would add minimal processing time but utilize the power of the data step that I was already in.  For large datasets this is also more efficient than using proc freq after the data step.  Also, this technique allows for overlapping ranges when that is of analytical use.
 
@@ -46,11 +46,11 @@ You can create nice-looking text printouts that can easily be copied into emails
 ### (See test_email.sas)
 Actually, this is not as easy as it used to be... Most IT departments will block this from happening.  But it was fun while it lasted.  I used to insert the following code at the end of some of my longer-running programs:
 
-![Email when done](email_code.png)
+![Email when done](images/email_code.png)
 
 And the following would show up in my inbox:
 
-![You are done](email_results.png)
+![You are done](images/email_results.png)
 
 But security being what it is now... that loophole is closed and I just have to pay attention to my runs. 
 
@@ -66,10 +66,10 @@ From that information we created a series of programs--
 The beauty of SAS code is that it is just plain text.  And plain text is easy to write with a file statement in SAS.
 
 Take the following code for example:
-![code that creates code](code_creating_code.png)
+![code that creates code](images/code_creating_code.png)
 
 And now look at the code that was created:
-![code written by SAS](code_creating_results.png)
+![code written by SAS](images/code_creating_results.png)
 
 ## Using SAS code to write to a post-script file and eventually create a PDF
 ### (See rfd_prep.sas and rfd_create.sas)
