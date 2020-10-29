@@ -35,11 +35,11 @@ What does it look like?
 # Printing key observation counts
 Consider the following example.
 
-![Creating key counts](/images/counting_code.png)
+![Creating key counts](images/counting_code.png)
 
 What do the results look like?
 
-![Displaying key counts](/images/counting_results.png)
+![Displaying key counts](/./images/counting_results.png)
 
 You can create nice-looking text printouts that can easily be copied into emails or documents.  In this example, I used a data step just to create the counts.  In practice, I would create these counts in a data step that was functional in the program.  This would add minimal processing time but utilize the power of the data step that I was already in.  For large datasets this is also more efficient than using proc freq after the data step.  Also, this technique allows for overlapping ranges when that is of analytical use.
 
